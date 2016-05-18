@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    position: fixed;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-perspective: 0;
+    perspective: none;
+    overflow: hidden;
+    background: #333;
+}
+board {
+    background-color: white;
+}
+piece {
+    cursor: pointer;
+    ;
+    background-repeat: no-repeat;
+    background-color: white;
+    position: relative;
+    -webkit-transition: box-shadow 100ms;
+    transition: box-shadow 100ms;
+}
+piece:hover {
+    z-index: 2;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.8);
+}
+piece.in-motion {
+    z-index: 2;
+    box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.8);
+}
+.caption {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: 32.5%;
+    top: 18%;
+    color: white;
+    z-index: 10;
+}
+.cardswipe {
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    background: darkgrey;
+    left: 49.5%;
+    z-index: 9;
+}
